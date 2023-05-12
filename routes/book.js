@@ -5,6 +5,11 @@ const bookController = require("../controller/book");
 const router = express.Router();
 
 // GET /books
+router.get("/", (req, res) => {
+    res.status(200).json("Node Server is Running!")
+});
+
+// GET /books
 router.get("/books", bookController.getBooks);
 
 // POST /book
